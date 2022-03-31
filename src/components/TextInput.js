@@ -32,11 +32,11 @@ const TextInput = (props) => {
 			autoFocus
 			fullWidth
 			InputProps={{
-				endAdornment: <InputAdornment position="end">
-					<StyledRemoveButton variant='string'>
+				endAdornment: props.value && <InputAdornment position="end">
+					<StyledRemoveButton variant='string' onClick={props.onReset}>
 						<Typography sx={{ color: BLACK }}>X</Typography>
 					</StyledRemoveButton>
-					</InputAdornment>,
+					</InputAdornment>
 			}}
 			{...props}
 		/>

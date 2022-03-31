@@ -93,10 +93,18 @@ const useAppData = () => {
 		return;
 	}
 
+	const handleReset = (e) => {
+		setValues('');
+		setLastNumber('');
+		setText('');
+		setError(false);
+	}
+
   return {
     state,
 		handleChange,
 		handleClick,
+		handleReset,
   }
 };
 

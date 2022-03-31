@@ -10,7 +10,7 @@ import Result from './components/Result.js';
 import CheckButton from './components/CheckButton.js';
 
 const App = () => {
-	const { state, handleChange, handleClick } = useAppData();
+	const { state, handleChange, handleClick, handleReset } = useAppData();
 	const { values, text, error } = state;
 
   return (
@@ -23,6 +23,7 @@ const App = () => {
 						placeholder='xxxx xxxx xxxx xxxx'
 						value={values}
 						onChange={handleChange}
+						onReset={handleReset}
 					/>
 					{ text && <Result text={text} error={error} /> }
 				</CardWrapper>
