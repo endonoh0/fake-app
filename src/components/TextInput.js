@@ -46,6 +46,7 @@ const TextInput = (props) => {
 TextInput.propTypes = {
 	value: PropTypes.any.isRequired,
 	onChange: PropTypes.func.isRequired,
+	onReset: PropTypes.func.isRequired,
 };
 
 export default TextInput;
