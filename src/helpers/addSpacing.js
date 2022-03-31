@@ -5,7 +5,7 @@
  * @param {int} spaceEvery number of characters before inserting a space
  * @return {String} The replaced string
  */
-export function addSpacing(str, spaceEvery) {
+export default function addSpacing(str, spaceEvery) {
 	// Match every any single letter, number or underscore
 	const matchAll = /\W/gi;
 	// Match any single character every x occurences
