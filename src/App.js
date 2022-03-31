@@ -1,13 +1,14 @@
 import React from 'react';
 
+// React components
 import { Grid, Box } from '@mui/material';
-
+import CardWrapper from './components/CardWrapper.js';
+import CheckButton from './components/CheckButton.js';
 import Content from './components/Content.js';
 import TextInput from './components/TextInput.js';
-import useAppData from './hooks/useAppData.js';
-import CardWrapper from './components/CardWrapper.js';
 import Result from './components/Result.js';
-import CheckButton from './components/CheckButton.js';
+
+import useAppData from './hooks/useAppData.js';
 
 const App = () => {
 	const { state, handleChange, handleClick, handleReset } = useAppData();
@@ -19,11 +20,11 @@ const App = () => {
 				<CardWrapper>
 					<Content />
 					<TextInput
-						error={error}
-						placeholder='xxxx xxxx xxxx xxxx'
 						value={values}
+						error={error}
 						onChange={handleChange}
 						onReset={handleReset}
+						placeholder='xxxx xxxx xxxx xxxx'
 					/>
 					{ text && <Result text={text} error={error} /> }
 				</CardWrapper>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Card, styled } from '@mui/material';
+
 import { BLACK } from '../constants/colors';
 
 const StyledCard = styled(Card)({
