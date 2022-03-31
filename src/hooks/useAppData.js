@@ -28,7 +28,7 @@ const reducer = (state, action) => {
 // Constants
 const MAX_CARD_LENGTH = 19;
 const SPACE_EVERY = 4;
-const sumNumbers = ['5', '2'];
+const LAST_NUMBERS = ['5', '2'];
 
 /** Return App initial state */
 const initApp = () => {
@@ -57,10 +57,6 @@ const useAppData = () => {
 			return;
 		}
 
-		if (newValues.length < MAX_CARD_LENGTH) {
-			setLastNumber('');
-		}
-
 		const isValid = validateCardNumbers(newValues, MAX_CARD_LENGTH);
 		if (!isValid) {
 			return;
@@ -72,8 +68,10 @@ const useAppData = () => {
 		const newLastNumber = newValues[MAX_CARD_LENGTH - 1];
 		if (newValues.length === MAX_CARD_LENGTH && newLastNumber) {
 			setLastNumber(newLastNumber);
-			return;
+		} else {
+			setLastNumber('');
 		}
+		return;
 	}
 
 	const handleClick = (e) => {
@@ -85,8 +83,9 @@ const useAppData = () => {
 
 		let newText = 'Your balance is $';
 
+		// Clone the first 12 numbers
 		const numbers = state.values.slice().split(' ').join('').substring(0, 12);
-		newText += sumCardNumbers(numbers, state.lastNumber, sumNumbers);
+		newText += sumCardNumbers(numbers, state.lastNumber, LAST_NUMBERS);
 
 		setText(newText);
 		setError(false);
