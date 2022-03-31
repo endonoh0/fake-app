@@ -1,9 +1,16 @@
+html {
+	height: 100%;
+}
+
 body {
+	height: 100%;
   margin: 0;
   font-family: 'Roboto Mono', 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFF;
+	 background: linear-gradient(rgba(249, 245, 242, 0), #FAF3EE);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -31,16 +38,4 @@ b {
   font-weight: 700;
   src: local('Roboto'), local('Roboto'),
   url('./fonts/Roboto-Bold.ttf') format('truetype');
-}
-
-h1, h2 {
-	font-family: Roboto;
-	font-weight: bold;
-	font-style: normal;
-}
-
-h3, h4, h5, h6 {
-	font-family: Roboto Mono;
-	font-weight: bold;
-	font-style: normal;
 }
