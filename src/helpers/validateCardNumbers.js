@@ -1,5 +1,5 @@
 /**
- * Validate the credit card number with @param str
+ * Validate the credit card number.
  *
  * @param {String} str credit card number
  * @param {Int} length maximum string length
