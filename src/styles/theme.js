@@ -30,8 +30,7 @@ let Theme = createTheme({
     MuiOutlinedInput: {
 			styleOverrides: {
         root: {
-					borderTopLeftRadius: 0,
-					borderTopRightRadius: 0,
+					borderRadius: '0',
         },
 				input: {
 					fontFamily: 'Roboto Mono',
