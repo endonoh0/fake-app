@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TextField, styled } from '@mui/material';
+import { TextField, styled, InputAdornment, Typography, Button } from '@mui/material';
 
 import { BLACK, DARK_ORANGE, GREY, LIGHT_GREY } from '../constants/colors';
 
@@ -24,6 +24,20 @@ const TextInput = (props) => {
 			size='medium'
 			autoFocus
 			fullWidth
+			InputProps={{
+				endAdornment: <InputAdornment position="end">
+					<Button
+					 variant='string'
+						sx={{
+							borderRadius: '20px',
+							minWidth: '100%',
+							width: '100%',
+						}}
+					>
+						<Typography sx={{ color: BLACK }}>X</Typography>
+					</Button>
+					</InputAdornment>,
+			}}
 			{...props}
 		/>
 	)
