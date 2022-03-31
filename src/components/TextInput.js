@@ -17,7 +17,14 @@ const StyledTextInput = styled(TextField)((props) => ({
 	},
 }));
 
+const StyledRemoveButton = styled(Button)({
+	width: '100%',
+	minWidth: '100%',
+	borderRadius: '20px',
+});
+
 const TextInput = (props) => {
+
 	return (
 		<StyledTextInput
 			type="text"
@@ -26,16 +33,9 @@ const TextInput = (props) => {
 			fullWidth
 			InputProps={{
 				endAdornment: <InputAdornment position="end">
-					<Button
-					 variant='string'
-						sx={{
-							borderRadius: '20px',
-							minWidth: '100%',
-							width: '100%',
-						}}
-					>
+					<StyledRemoveButton variant='string'>
 						<Typography sx={{ color: BLACK }}>X</Typography>
-					</Button>
+					</StyledRemoveButton>
 					</InputAdornment>,
 			}}
 			{...props}
