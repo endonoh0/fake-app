@@ -1,5 +1,5 @@
 /**
- * @description Export all functions contains within the /helpers folder in this file.
+ * @description Export all functions within the /helpers folder in this file.
  */
 
 import addSpacing from './addSpacing';
