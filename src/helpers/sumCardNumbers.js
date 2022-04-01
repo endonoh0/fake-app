@@ -7,7 +7,7 @@
  * @returns {Int} total
  *
  */
-export default function sumCardNumbers(str, lastNumber, arr) {
+function sumCardNumbers(str, lastNumber, arr) {
 	let total = 0;
 
 	if (!arr.includes(lastNumber)) return total;
@@ -20,3 +20,5 @@ export default function sumCardNumbers(str, lastNumber, arr) {
 
 	return total;
 }
+
+module.exports = sumCardNumbers;

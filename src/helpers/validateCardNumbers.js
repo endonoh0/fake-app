@@ -9,8 +9,8 @@
  * 							2. Returns true for valid card numbers
  *
  */
-export default function validateCardNumbers(str, length) {
-	if (str.length > length) return false;
+function validateCardNumbers(str, length) {
+	if (!str || str.length > length) return false;
 
 	// Match [0-9] and white spaces
 	const conditionRegex = /^[\d\s]+$/;
@@ -21,3 +21,5 @@ export default function validateCardNumbers(str, length) {
 	}
 	return true;
 }
+
+module.exports = validateCardNumbers;
