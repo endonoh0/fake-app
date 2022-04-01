@@ -7,13 +7,17 @@ import { BLACK, DARK_ORANGE, GREY, LIGHT_GREY } from '../constants/colors';
 
 const StyledTextInput = styled(TextField)((props) => ({
 	borderTop: props.error ? `1px solid ${DARK_ORANGE}` : `1px solid ${BLACK}`,
-	borderBottom: props.error ? `1px solid ${DARK_ORANGE}` : `1px solid ${BLACK}`,
+	borderBottom: props.error ? `1px solid ${DARK_ORANGE}` : props.value ? `1px solid ${BLACK}` : 'unset',
+	'& .MuiOutlinedInput-root': {
+	  '&.Mui-focused fieldset': {
+			 borderWidth: '0px',
+    }
+	},
 	'& .MuiOutlinedInput-input': {
 		color: props.value ? GREY : LIGHT_GREY,
 	},
 	'& .MuiOutlinedInput-notchedOutline': {
-		borderRight: 'unset',
-		borderLeft: 'unset',
+		border: 'unset',
 	},
 }));
 
