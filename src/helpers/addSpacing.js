@@ -5,10 +5,12 @@
  * @param {Int} spaceEvery number of characters before inserting a space
  * @return {String} The replaced string
  */
-export default function addSpacing(str, spaceEvery) {
+function addSpacing(str, spaceEvery) {
 	// Match any single letter, number or underscore
 	const matchAll = /\W/gi;
 	// Match any single character every x occurences
-	var matchEveryOccurrence = new RegExp('(.{' + spaceEvery + '})', "g");
+	const matchEveryOccurrence = new RegExp('(.{' + spaceEvery + '})', "g");
 	return str.replace(matchAll, '').replace(matchEveryOccurrence, '$1 ').trim();
 }
+
+module.exports = addSpacing;
